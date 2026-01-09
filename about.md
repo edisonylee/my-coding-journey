@@ -24,12 +24,6 @@ Learning in public keeps me motivated and accountable. By documenting my progres
 - Build a portfolio of my learning
 - Develop consistent coding habits
 
-## Tools & Tech
-
-- **Platform**: GitHub Pages + Jekyll
-- **Languages**: Python, JavaScript, and more
-- **Focus Areas**: Data Structures, Algorithms, Web Development
-
 ## Get in Touch
 
 Feel free to reach out if you have questions or want to connect:
