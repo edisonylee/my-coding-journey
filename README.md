@@ -2,6 +2,8 @@
 
 A minimal, typewriter-inspired Jekyll blog for tracking daily coding progress, LeetCode problems, Python learning, and project work.
 
+**Live Site**: https://edisonylee.github.io/my-coding-journey/
+
 ## Features
 
 - **Daily Log**: Chronicle your coding journey day by day
