@@ -1,0 +1,28 @@
+---
+layout: page
+title: Python
+permalink: /python/
+---
+
+<p class="page-description">
+  My Python learning notes. Each entry covers a specific concept, pattern, or technique
+  I've studied and practiced.
+</p>
+
+<ul class="post-list">
+  {% assign python_posts = site.categories.python %}
+  {% for post in python_posts %}
+  <li class="post-item">
+    <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+      {{ post.date | date: "%Y-%m-%d" }}
+    </time>
+    <a href="{{ post.url | relative_url }}" class="post-link">
+      {{ post.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if python_posts.size == 0 %}
+<p class="no-posts">No Python entries yet. Time to start learning!</p>
+{% endif %}

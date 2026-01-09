@@ -1,0 +1,28 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<p class="page-description">
+  Projects I'm building and working on. Each entry documents a specific project,
+  its progress, and what I've learned.
+</p>
+
+<ul class="post-list">
+  {% assign project_posts = site.categories.projects %}
+  {% for post in project_posts %}
+  <li class="post-item">
+    <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+      {{ post.date | date: "%Y-%m-%d" }}
+    </time>
+    <a href="{{ post.url | relative_url }}" class="post-link">
+      {{ post.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if project_posts.size == 0 %}
+<p class="no-posts">No project entries yet. Time to start building!</p>
+{% endif %}

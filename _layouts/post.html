@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+      {% if page.hours %}
+        <span class="hours">• {{ page.hours }} hours</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.tags contains 'leetcode' or page.tags contains 'python' or page.tags contains 'projects' %}
+  <div class="post-links">
+    <p class="section-links-title">Explore more:</p>
+    <ul class="section-links">
+      {% if page.tags contains 'leetcode' %}
+      <li><a href="{{ '/leetcode/' | relative_url }}">→ See all LeetCode notes</a></li>
+      {% endif %}
+      {% if page.tags contains 'python' %}
+      <li><a href="{{ '/python/' | relative_url }}">→ See all Python notes</a></li>
+      {% endif %}
+      {% if page.tags contains 'projects' %}
+      <li><a href="{{ '/projects/' | relative_url }}">→ See all Projects</a></li>
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="post-nav">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url | relative_url }}" class="post-nav-link post-nav-prev">
+      ← {{ page.previous.title }}
+    </a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{ page.next.url | relative_url }}" class="post-nav-link post-nav-next">
+      {{ page.next.title }} →
+    </a>
+    {% endif %}
+  </div>
+</article>

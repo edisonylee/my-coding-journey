@@ -1,0 +1,39 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+  <header class="home-header">
+    <h1 class="home-title">{{ site.title }}</h1>
+    <p class="home-subtitle">{{ site.author }}</p>
+  </header>
+
+  <section class="intro">
+    <p>
+      Welcome to my coding journey. This is where I document my daily progress,
+      tackle DSA problems, explore Python concepts, and build projects.
+      Every entry is a step forward in becoming a better developer.
+    </p>
+    <p>
+      I'm learning in public, one day at a time. Feel free to follow along.
+    </p>
+  </section>
+
+  <section class="recent-updates">
+    <h2>Recent Updates</h2>
+    <ul class="post-list">
+      {% assign recent_posts = site.posts | where: "categories", "log" | limit: 10 %}
+      {% for post in recent_posts %}
+      <li class="post-item">
+        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%Y-%m-%d" }}
+        </time>
+        <a href="{{ post.url | relative_url }}" class="post-link">
+          {{ post.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

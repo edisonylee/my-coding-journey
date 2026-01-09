@@ -1,0 +1,41 @@
+# Site settings
+title: "My Coding Journey"
+author: "Edison Lee"
+description: "A developer's daily journal tracking coding progress, LeetCode problems, Python learning, and project work"
+baseurl: ""
+url: "https://edisonylee.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

@@ -1,0 +1,31 @@
+---
+layout: page
+title: Daily Log
+permalink: /log/
+---
+
+<p class="page-description">
+  A chronological record of my daily coding progress. Each entry documents what I learned,
+  problems I solved, and progress made.
+</p>
+
+<ul class="post-list">
+  {% assign log_posts = site.posts | where: "categories", "log" %}
+  {% for post in log_posts %}
+  <li class="post-item">
+    <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+      {{ post.date | date: "%Y-%m-%d" }}
+    </time>
+    <a href="{{ post.url | relative_url }}" class="post-link">
+      {{ post.title }}
+    </a>
+    {% if post.hours %}
+    <span class="post-hours">{{ post.hours }}h</span>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+{% if log_posts.size == 0 %}
+<p class="no-posts">No entries yet. Start your journey today!</p>
+{% endif %}

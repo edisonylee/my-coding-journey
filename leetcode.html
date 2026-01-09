@@ -1,0 +1,28 @@
+---
+layout: page
+title: LeetCode
+permalink: /leetcode/
+---
+
+<p class="page-description">
+  Collection of LeetCode problems I've solved. Each entry focuses on a specific problem
+  with my approach, solution, and key takeaways.
+</p>
+
+<ul class="post-list">
+  {% assign leetcode_posts = site.categories.leetcode %}
+  {% for post in leetcode_posts %}
+  <li class="post-item">
+    <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+      {{ post.date | date: "%Y-%m-%d" }}
+    </time>
+    <a href="{{ post.url | relative_url }}" class="post-link">
+      {{ post.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if leetcode_posts.size == 0 %}
+<p class="no-posts">No LeetCode entries yet. Time to start solving!</p>
+{% endif %}
