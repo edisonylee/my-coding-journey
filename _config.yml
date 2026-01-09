@@ -2,7 +2,7 @@
 title: "My Coding Journey"
 author: "Edison Lee"
 description: "A developer's daily journal tracking coding progress, LeetCode problems, Python learning, and project work"
-baseurl: ""
+baseurl: "/my-coding-journey"
 url: "https://edisonylee.github.io"
 
 # Build settings
