@@ -60,7 +60,7 @@ The key insight is finding a **commonality** between anagrams. Words that are an
 
 ### Handwritten Walkthrough
 
-![Group Anagrams Solution]({{ '/assets/css/lc49.png' | relative_url }})
+![Group Anagrams Solution]({{ '/assets/images/lc49.png' | relative_url }})
 
 ### Code Implementation
 

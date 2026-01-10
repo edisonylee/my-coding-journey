@@ -410,6 +410,35 @@ a:hover {
 }
 
 /* ====================================
+   Difficulty Badges
+   ==================================== */
+.difficulty-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-left: var(--spacing-xs);
+}
+
+.difficulty-easy {
+  background-color: #00b8a3;
+  color: white;
+}
+
+.difficulty-medium {
+  background-color: #ffc01e;
+  color: #2a2a2a;
+}
+
+.difficulty-hard {
+  background-color: #ef4743;
+  color: white;
+}
+
+/* ====================================
    Responsive Design
    ==================================== */
 @media (max-width: 768px) {

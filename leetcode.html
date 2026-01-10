@@ -19,6 +19,9 @@ permalink: /leetcode/
     <a href="{{ post.url | relative_url }}" class="post-link">
       {{ post.title }}
     </a>
+    {% if post.difficulty %}
+    <span class="difficulty-badge difficulty-{{ post.difficulty }}">{{ post.difficulty }}</span>
+    {% endif %}
   </li>
   {% endfor %}
 </ul>
