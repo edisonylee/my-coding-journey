@@ -36,4 +36,26 @@ title: Home
       {% endfor %}
     </ul>
   </section>
+
+  <section class="recent-dsa">
+    <h2>Recent DSA Questions</h2>
+    <ul class="post-list">
+      {% assign recent_leetcode = site.posts | where: "categories", "leetcode" | limit: 3 %}
+      {% for post in recent_leetcode %}
+      <li class="post-item">
+        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%Y-%m-%d" }}
+        </time>
+        <a href="{{ post.url | relative_url }}" class="post-link">
+          {{ post.title }}
+        </a>
+        {% if post.difficulty %}
+        <span class="difficulty-badge difficulty-{{ post.difficulty }}">
+          {{ post.difficulty }}
+        </span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 </div>
